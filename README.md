@@ -51,3 +51,7 @@ class Util {
   }
 }
 ```
+
+## Firebase
+
+https://firebase.google.com/docs/flutter/setup
