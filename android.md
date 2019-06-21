@@ -96,7 +96,7 @@ vim android/app/src/main/AndroidManifest.xml
         <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="YOUR_ADMOB_APP_ID"/>
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 </manifest>
 ```
