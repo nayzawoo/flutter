@@ -40,7 +40,9 @@ defaultConfig {
 keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
 ```
 
-Create a file named `<app dir>/android/key.properties`
+```
+touch android/key.properties
+```
 
 ```properties
 storePassword=<password from previous step>
@@ -81,6 +83,10 @@ signingConfigs {
 ```
 
 Configure Proguard
+
+```
+touch android/app/proguard-rules.pro
+```
 
 ```pro
 ## Flutter wrapper
