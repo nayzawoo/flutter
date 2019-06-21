@@ -4,35 +4,6 @@
 flutter create --org com.nayzawoo newapp
 ```
 
-## Change Package Name
-
-Change the label name in your AndroidManifest.xml file:
-
-```xml
- <application
-    android:name="io.flutter.app.FlutterApplication"
-              android:label="TheNameOfYourApp">
-   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="your.package.name">
-  </minifest>
-</aplication>
-
-```
-
-build.gradle file inside app folder
-
-```gradle
-defaultConfig {
-    applicationId "your.package.name"
-    minSdkVersion 16
-    targetSdkVersion 27
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-}
-```
-
-
 ## Release
 ### Signing the app
 
@@ -129,3 +100,51 @@ vim android/app/src/main/AndroidManifest.xml
 ```
 flutter build appbundle
 ```
+
+## Generate Launcher Icons
+
+```yaml
+dependencies:
+  flutter_launcher_icons: ^0.7.2
+flutter_icons:
+  android: "launcher_icon" 
+  ios: true
+  image_path: "assets/icon/icon.png"
+```
+
+```
+flutter pub get
+flutter pub run flutter_launcher_icons:main 
+```
+
+-----------------
+
+
+## Change Package Name
+
+Change the label name in your AndroidManifest.xml file:
+
+```xml
+ <application
+    android:name="io.flutter.app.FlutterApplication"
+              android:label="TheNameOfYourApp">
+   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="your.package.name">
+  </minifest>
+</aplication>
+
+```
+
+build.gradle file inside app folder
+
+```gradle
+defaultConfig {
+    applicationId "your.package.name"
+    minSdkVersion 16
+    targetSdkVersion 27
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+}
+```
+
