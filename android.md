@@ -23,6 +23,10 @@ storeFile=<location of the key store file, such as /Users/<user name>/key.jks>
 ```
 
 Configure signing for your app by editing the `<app dir>/android/app/build.gradle` file.
+
+```
+vim android/app/build.gradle
+```
   
 ```
 def keystoreProperties = new Properties()
