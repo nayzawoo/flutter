@@ -98,13 +98,22 @@ vim android/app/proguard-rules.pro
 -keep class io.flutter.plugins.**  { *; }
 ```
 
-`AndroidManifest.xml`
+### Allow Network
+
+```
+vim android/app/src/main/AndroidManifest.xml
+```
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-For Admob `AndroidManifest.xml`
+
+### Admob(Simple/Production)
+
+```
+vim android/app/src/main/AndroidManifest.xml
+```
 
 ```xml
 <manifest>
