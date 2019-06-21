@@ -1,7 +1,7 @@
 # Android
 
 ```
-flutter create newapp
+flutter create --org com.nayzawoo newapp
 ```
 
 ## Change Package Name
@@ -82,13 +82,13 @@ signingConfigs {
    
 ```
 
-Configure Proguard
+### Configure Proguard
 
 ```
 vim android/app/proguard-rules.pro
 ```
 
-```pro
+```
 ## Flutter wrapper
 -keep class io.flutter.app.** { *; }
 -keep class io.flutter.plugin.**  { *; }
@@ -97,7 +97,6 @@ vim android/app/proguard-rules.pro
 -keep class io.flutter.**  { *; }
 -keep class io.flutter.plugins.**  { *; }
 ```
-
 
 `AndroidManifest.xml`
 
