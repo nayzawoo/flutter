@@ -25,30 +25,30 @@ storeFile=<location of the key store file, such as /Users/<user name>/key.jks>
 Configure signing for your app by editing the `<app dir>/android/app/build.gradle` file.
   
 ```
-  def keystoreProperties = new Properties()
-   def keystorePropertiesFile = rootProject.file('key.properties')
-   if (keystorePropertiesFile.exists()) {
-       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-   }
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+   keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
 
-   android {}
+android {}
    
 signingConfigs {
-       release {
-           keyAlias keystoreProperties['keyAlias']
-           keyPassword keystoreProperties['keyPassword']
-           storeFile file(keystoreProperties['storeFile'])
-           storePassword keystoreProperties['storePassword']
-       }
+   release {
+       keyAlias keystoreProperties['keyAlias']
+       keyPassword keystoreProperties['keyPassword']
+       storeFile file(keystoreProperties['storeFile'])
+       storePassword keystoreProperties['storePassword']
    }
-   buildTypes {
-       release {
-            minifyEnabled true
-            useProguard true
-           signingConfig signingConfigs.release
-           proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-       }
+}
+buildTypes {
+   release {
+        minifyEnabled true
+        useProguard true
+       signingConfig signingConfigs.release
+       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
    }
+}
    
    
 ```
@@ -125,8 +125,8 @@ flutter pub run flutter_launcher_icons:main
 Change the label name in your AndroidManifest.xml file:
 
 ```xml
- <application
-    android:name="io.flutter.app.FlutterApplication"
+<application
+  android:name="io.flutter.app.FlutterApplication"
               android:label="TheNameOfYourApp">
    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="your.package.name">
