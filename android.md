@@ -24,10 +24,10 @@ storeFile=<location of the key store file, such as /Users/<user name>/key.jks>
 
 Configure signing for your app by editing the `<app dir>/android/app/build.gradle` file.
 
-```
-vim android/app/build.gradle
-```
+
+vim `android/app/build.gradle`
   
+
 ```
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
@@ -59,9 +59,9 @@ buildTypes {
 
 ### Configure Proguard
 
-```
-vim android/app/proguard-rules.pro
-```
+
+vim `android/app/proguard-rules.pro`
+
 
 ```
 ## Flutter wrapper
@@ -75,9 +75,9 @@ vim android/app/proguard-rules.pro
 
 ### Allow Network
 
-```
-vim android/app/src/main/AndroidManifest.xml
-```
+
+vim `android/app/src/main/AndroidManifest.xml`
+
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
