@@ -109,7 +109,11 @@ flutter build appbundle
 
 ```yaml
 dependencies:
+  flutter:
+    sdk: flutter
+    cupertino_icons: ^0.1.2
   flutter_launcher_icons: ^0.7.2
+
 flutter_icons:
   android: "launcher_icon" 
   ios: true
